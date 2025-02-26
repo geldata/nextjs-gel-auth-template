@@ -16,7 +16,7 @@ ${RESET_CONFIG} ext::auth::SMTPConfig;
 `;
 
 const SETUP_AUTH_CONFIG = `
-${SET_CONFIG} ext::auth::AuthConfig::auth_signing_key := "${process.env.GEL_AUTH_SIGNING_KEY}";
+${SET_CONFIG} ext::auth::AuthConfig::auth_signing_key := "${process.env.EDGEDB_AUTH_SIGNING_KEY}";
 ${SET_CONFIG} ext::auth::AuthConfig::app_name := "Gel Next.js Starter";
 ${SET_CONFIG} ext::auth::AuthConfig::brand_color := "#0000EE";
 ${SET_CONFIG} ext::auth::AuthConfig::allowed_redirect_urls := {
