@@ -14,7 +14,7 @@ export interface Props {
 }
 const deleteItem = async (id: string) => {
   "use server";
-  const session = auth.getSession();
+  const session = await auth.getSession();
 
   const res = await session.client.query("DELETE Item FILTER .id = <uuid>$id", {
     id,

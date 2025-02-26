@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 
 const addItem = async (name: string) => {
   "use server";
-  const session = auth.getSession();
+  const session = await auth.getSession();
 
   await session.client.query(
     "with name := <str>$name insert Item { name := name }",

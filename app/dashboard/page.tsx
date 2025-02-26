@@ -6,7 +6,7 @@ import Link from "next/link";
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const { client } = auth.getSession();
+  const { client } = await auth.getSession();
 
   const items = await client.query<Props["items"][number]>(`
     select Item {

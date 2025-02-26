@@ -14,7 +14,7 @@ export default async function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = auth.getSession();
+  const session = await auth.getSession();
   const signedIn = await session.isSignedIn();
 
   if (!signedIn) {
