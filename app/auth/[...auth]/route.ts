@@ -14,7 +14,7 @@ export const { GET, POST } = auth.createAuthRouteHandlers({
     }
 
     if (isSignUp) {
-      const client = auth.getSession().client;
+      const client = (await auth.getSession()).client;
 
       const emailData = await client.querySingle<{ email: string }>(`
         SELECT ext::auth::EmailFactor {
