@@ -1,6 +1,6 @@
 "use server";
 
-import { auth } from "@/edgedb";
+import { auth } from "@/gel";
 const authActions = auth.createServerActions();
 
 export const { signout } = authActions;

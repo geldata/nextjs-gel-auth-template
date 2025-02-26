@@ -9,7 +9,7 @@ STORAGE_READINESS_POLLING_INTERVAL_SECONDS="${STORAGE_READINESS_POLLING_INTERVAL
 attempt_count=0
 
 while [[ $attempt_count -lt $STORAGE_READINESS_POLLING_ATTEMPTS ]]; do
-    if pnpm exec edgedb instance status -I="$EDGEDB_INSTANCE"; then
+    if pnpm exec gel instance status -I="$GEL_INSTANCE"; then
         break
     fi
     sleep "$STORAGE_READINESS_POLLING_INTERVAL_SECONDS"
@@ -24,5 +24,5 @@ fi
 echo "Storage ready, running migrations and code generation."
 
 ./maybe-initialize-database.sh
-pnpm exec edgedb migrate
+pnpm exec gel migrate
 pnpm run generate:all

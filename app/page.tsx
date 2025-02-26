@@ -1,10 +1,10 @@
-import { auth } from "@/edgedb";
+import { auth } from "@/gel";
 import Link from "next/link";
 import NextSteps from "@/components/NextSteps";
-import { EdgeDB_Vercel } from "@/components/Logo";
+import { Gel_Vercel } from "@/components/Logo";
 
 export default async function Home() {
-  const session = auth.getSession();
+  const session = await auth.getSession();
 
   const signedIn = await session.isSignedIn();
 
@@ -15,7 +15,7 @@ export default async function Home() {
           className="flex items-center justify-between p-6 lg:px-8"
           aria-label="Global"
         >
-          <a className='contents' href='https://github.com/edgedb/nextjs-edgedb-auth-template' target='_blank' rel="noopener noreferrer">
+          <a className='contents' href='https://github.com/geldata/nextjs-gel-auth-template' target='_blank' rel="noopener noreferrer">
             <img src="/github.png" alt="GitHub" className="h-6 block hover:scale-105 transform transition duration-300 ease-in-out" />
           </a>
           {!signedIn ? (
@@ -54,16 +54,16 @@ export default async function Home() {
 
       <div className="relative isolate px-6 py-14 lg:px-8">
         <div className="mx-auto max-w-2xl pt-16 sm:pt-24 lg:pt-32 flex flex-col items-center">
-          <EdgeDB_Vercel />
+          <Gel_Vercel />
           <div className="text-center mt-10">
-            <h1 className="text-4xl py-2 font-bold tracking-tight text-gray-900 sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#259474] to-[#1A67FF]
+            <h1 className="text-4xl py-2 font-bold tracking-tight text-gray-900 sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#955CF0] to-[#1C008A]
           ">
-              EdgeDB Next.js Auth Template
+              Gel Next.js Auth Template
             </h1>
             <p className="mt-6 text-base leading-7 text-gray-600">
-              Welcome to the EdgeDB Next.js Starter. This starter is designed to
-              help you get up and running with EdgeDB and Next.js quickly. It
-              includes a basic setup for authentication, EdgeDB schema, and a UI
+              Welcome to the Gel Next.js Starter. This starter is designed to
+              help you get up and running with Gel and Next.js quickly. It
+              includes a basic setup for authentication, Gel schema, and a UI
               to get you started. Below are some next steps to help you get up
               to speed.
             </p>

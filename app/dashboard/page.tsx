@@ -1,4 +1,4 @@
-import { auth } from "@/edgedb";
+import { auth } from "@/gel";
 
 import Items, { Props } from "@/components/Items";
 import Link from "next/link";

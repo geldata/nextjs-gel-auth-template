@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@edgedb/auth-nextjs':
-        specifier: ^0.3.1
-        version: 0.3.1(edgedb@1.6.0-canary.20240905T020729)(next@14.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      '@gel/auth-nextjs':
+        specifier: 0.4.0
+        version: 0.4.0(gel@2.0.0)(next@14.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@headlessui/react':
         specifier: ^1.7.18
         version: 1.7.18(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -20,9 +20,9 @@ importers:
       '@tailwindcss/forms':
         specifier: ^0.5.7
         version: 0.5.7(tailwindcss@3.4.10)
-      edgedb:
-        specifier: 1.6.0-canary.20240905T020729
-        version: 1.6.0-canary.20240905T020729
+      gel:
+        specifier: 2.0.0
+        version: 2.0.0
       next:
         specifier: 14.2.6
         version: 14.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -36,12 +36,12 @@ importers:
         specifier: ^4.19.0
         version: 4.19.0
     devDependencies:
-      '@edgedb/generate':
-        specifier: ^0.5.5
-        version: 0.5.5(edgedb@1.6.0-canary.20240905T020729)
       '@eslint/eslintrc':
         specifier: 2.x
         version: 2.1.4
+      '@gel/generate':
+        specifier: 0.6.0
+        version: 0.6.0(gel@2.0.0)
       '@ngneat/falso':
         specifier: ^7.2.0
         version: 7.2.0
@@ -96,25 +96,6 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
-
-  '@edgedb/auth-core@0.2.1':
-    resolution: {integrity: sha512-denOSLG7vefeb5hoSPxGu8NV1EeDO1XAAli17nhl8l4nQUVjnrSIE/5keTXib6DUel3nZSJG+yLmYkIrOFJOBQ==}
-    peerDependencies:
-      edgedb: ^1.3.6
-
-  '@edgedb/auth-nextjs@0.3.1':
-    resolution: {integrity: sha512-FeAvV4G6LO8MFKPz2ji0egDbC+io9TBUlLKlbtlHB2qomyrxOpqwBhk2plfkG1iBEg9BAdBa3WvX1r3EE8dNow==}
-    peerDependencies:
-      edgedb: ^1.3.6
-      next: '>=13.5.6 <15.0.0'
-      react: ^18.2.0
-
-  '@edgedb/generate@0.5.5':
-    resolution: {integrity: sha512-tQOT8TmMI3WVUU0ChpCl4rlT1WbmzZVGEohEjn7Uz3f8BhJYEhapkVqV/hlwZcsbFQPClIAFqQnKfXblcB5wqw==}
-    engines: {node: '>= 18.0.0'}
-    hasBin: true
-    peerDependencies:
-      edgedb: ^1.5.10
 
   '@esbuild/aix-ppc64@0.23.1':
     resolution: {integrity: sha512-6VhYk1diRqrhBAqpJEdjASR/+WVRtfjpqKuNw11cLiaWpAT/Uu+nokB+UJnevzy/P9C/ty6AOe0dwueMrGh/iQ==}
@@ -278,6 +259,25 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
+  '@gel/auth-core@0.3.0':
+    resolution: {integrity: sha512-fJfKculs4AmiyTRABTqlBbC54thmStYL+PS/sZ/ORIOv0POAwQp6JraFWGEl3WAekGmXjWrWAQX5Bb4vrNRFJw==}
+    peerDependencies:
+      gel: ^2.0.0
+
+  '@gel/auth-nextjs@0.4.0':
+    resolution: {integrity: sha512-mls45ubv4MWlpfPxdjqXpD4TsLRHUESVdPic41ANL3Ei/OAOZK+nFHFjm+i/KzPctqjwKuk2QF5RWiSDBRZAnA==}
+    peerDependencies:
+      gel: ^2.0.0
+      next: '>=13.5.6 <16.0.0'
+      react: ^18.2.0 || ^19.0
+
+  '@gel/generate@0.6.0':
+    resolution: {integrity: sha512-p1qiR/JHNM52GCp19aes2Nwt2gzz0juJu6xaXFQyT1nyAdjIBfiy9j/JNxEM9xvfXUjv/yf3OiEk9Rq7zJjLHg==}
+    engines: {node: '>= 18.0.0'}
+    hasBin: true
+    peerDependencies:
+      gel: ^2.0.0-rc
+
   '@headlessui/react@1.7.18':
     resolution: {integrity: sha512-4i5DOrzwN4qSgNsL4Si61VMkUcWbcSKueUV7sFhpHzQcSShdlHENE5+QBntMSRvHt8NyoFO2AGG8si9lq+w4zQ==}
     engines: {node: '>=10'}
@@ -410,6 +410,9 @@ packages:
   '@nolyfill/is-core-module@1.0.39':
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
+
+  '@petamoriken/float16@3.9.1':
+    resolution: {integrity: sha512-j+ejhYwY6PeB+v1kn7lZFACUIG97u90WxMuGosILFsl9d4Ovi0sjk0GlPfoEcx+FzvXZDAfioD+NGnnPamXgMA==}
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -834,11 +837,6 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  edgedb@1.6.0-canary.20240905T020729:
-    resolution: {integrity: sha512-oxzSeSC9NSgJiFLWKhdQAz9VmBmQ9gSa0y8gdg/2ZaP38yp9xcsimUmbFnYhroY3ShVVx+jicC4cjoJFDdSx+g==}
-    engines: {node: '>= 18.0.0'}
-    hasBin: true
-
   electron-to-chromium@1.5.13:
     resolution: {integrity: sha512-lbBcvtIJ4J6sS4tb5TLp1b4LyfCdMkwStzXPyAgVgTRAsep4bvrAGaBOP7ZJtQMNJpSQ9SqG4brWOroNaQtm7Q==}
 
@@ -1098,6 +1096,11 @@ packages:
 
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
+
+  gel@2.0.0:
+    resolution: {integrity: sha512-Oq3Fjay71s00xzDc0BF/mpcLmnA+uRqMEJK8p5K4PaZjUEsxaeo+kR9OHBVAf289/qPd+0OcLOLUN0UhqiUCog==}
+    engines: {node: '>= 18.0.0'}
+    hasBin: true
 
   get-intrinsic@1.2.4:
     resolution: {integrity: sha512-5uYhsJH8VJBTv7oslg4BznJYhDoRI6waYCxMmCdnTrcCrHA/fCFKoTFz2JKKE0HdDFUF7/oQuhzumXJK7paBRQ==}
@@ -1387,8 +1390,9 @@ packages:
     resolution: {integrity: sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ==}
     engines: {node: '>=4.0'}
 
-  jwt-decode@3.1.2:
-    resolution: {integrity: sha512-UfpWE/VZn0iP50d8cz9NrZLM9lSWhcJ+0Gt/nm4by88UL+J1SiKN8/5dkjMmbEzwL2CAe+67GsegCbIKtbp75A==}
+  jwt-decode@4.0.0:
+    resolution: {integrity: sha512-+KJGIyHgkGuIq3IEBNftfhW/LfWhXUIY6OmyVWjliu5KH1y0fw7VQ8YndE2O4qZdMSd9SqbnC8GOcZEy0Om7sA==}
+    engines: {node: '>=18'}
 
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
@@ -2083,26 +2087,6 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@edgedb/auth-core@0.2.1(edgedb@1.6.0-canary.20240905T020729)':
-    dependencies:
-      edgedb: 1.6.0-canary.20240905T020729
-      jwt-decode: 3.1.2
-
-  '@edgedb/auth-nextjs@0.3.1(edgedb@1.6.0-canary.20240905T020729)(next@14.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@edgedb/auth-core': 0.2.1(edgedb@1.6.0-canary.20240905T020729)
-      edgedb: 1.6.0-canary.20240905T020729
-      next: 14.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-
-  '@edgedb/generate@0.5.5(edgedb@1.6.0-canary.20240905T020729)':
-    dependencies:
-      '@iarna/toml': 2.2.5
-      debug: 4.3.6
-      edgedb: 1.6.0-canary.20240905T020729
-    transitivePeerDependencies:
-      - supports-color
-
   '@esbuild/aix-ppc64@0.23.1':
     optional: true
 
@@ -2197,6 +2181,26 @@ snapshots:
       - supports-color
 
   '@eslint/js@8.57.0': {}
+
+  '@gel/auth-core@0.3.0(gel@2.0.0)':
+    dependencies:
+      gel: 2.0.0
+      jwt-decode: 4.0.0
+
+  '@gel/auth-nextjs@0.4.0(gel@2.0.0)(next@14.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@gel/auth-core': 0.3.0(gel@2.0.0)
+      gel: 2.0.0
+      next: 14.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+
+  '@gel/generate@0.6.0(gel@2.0.0)':
+    dependencies:
+      '@iarna/toml': 2.2.5
+      debug: 4.3.6
+      gel: 2.0.0
+    transitivePeerDependencies:
+      - supports-color
 
   '@headlessui/react@1.7.18(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -2304,6 +2308,8 @@ snapshots:
       fastq: 1.17.1
 
   '@nolyfill/is-core-module@1.0.39': {}
+
+  '@petamoriken/float16@3.9.1': {}
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -2801,16 +2807,6 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  edgedb@1.6.0-canary.20240905T020729:
-    dependencies:
-      debug: 4.3.6
-      env-paths: 3.0.0
-      semver: 7.6.3
-      shell-quote: 1.8.1
-      which: 4.0.0
-    transitivePeerDependencies:
-      - supports-color
-
   electron-to-chromium@1.5.13: {}
 
   emoji-regex@8.0.0: {}
@@ -2998,7 +2994,7 @@ snapshots:
       debug: 4.3.6
       enhanced-resolve: 5.17.1
       eslint: 8.57.0
-      eslint-module-utils: 2.8.2(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.2(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.6
       is-bun-module: 1.1.0
@@ -3011,7 +3007,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.8.2(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0):
+  eslint-module-utils@2.8.2(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -3032,7 +3028,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.2(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.2(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.0)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -3245,6 +3241,17 @@ snapshots:
       functions-have-names: 1.2.3
 
   functions-have-names@1.2.3: {}
+
+  gel@2.0.0:
+    dependencies:
+      '@petamoriken/float16': 3.9.1
+      debug: 4.3.6
+      env-paths: 3.0.0
+      semver: 7.6.3
+      shell-quote: 1.8.1
+      which: 4.0.0
+    transitivePeerDependencies:
+      - supports-color
 
   get-intrinsic@1.2.4:
     dependencies:
@@ -3554,7 +3561,7 @@ snapshots:
       object.assign: 4.1.5
       object.values: 1.2.0
 
-  jwt-decode@3.1.2: {}
+  jwt-decode@4.0.0: {}
 
   keyv@4.5.4:
     dependencies:

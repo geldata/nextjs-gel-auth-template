@@ -9,7 +9,7 @@ set -o nounset
 
 is_schema_empty() {
     local result
-    result=$(pnpm exec edgedb migration log --from-db | wc -l | tr -d ' ')
+    result=$(pnpm exec gel migration log --from-db | wc -l | tr -d ' ')
     if [ "$result" -eq 0 ]; then
         return 0
     else
@@ -19,7 +19,7 @@ is_schema_empty() {
 
 is_auth_config_empty() {
     local result
-    result=$(pnpm exec edgedb query "select ext::auth::signing_key_exists();")
+    result=$(pnpm exec gel query "select ext::auth::signing_key_exists();")
     if [ "$result" = "true" ]; then
         return 1
     else
@@ -31,7 +31,7 @@ main() {
     # Check if the schema is empty
     if is_schema_empty; then
         echo "Schema is empty. Running migrations..."
-        pnpm exec edgedb migrate
+        pnpm exec gel migrate
     else
         echo "Schema is not empty. Skipping migrations."
     fi

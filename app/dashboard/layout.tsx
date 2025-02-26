@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import { auth } from "@/edgedb";
+import { auth } from "@/gel";
 import { signout } from "@/app/actions";
 import { redirect } from "next/navigation";
 

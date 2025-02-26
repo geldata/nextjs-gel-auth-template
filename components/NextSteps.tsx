@@ -21,8 +21,8 @@ const timeline = [
       <div>
         We&apos;ve set up the Email + Password provider for you, however in
         order to really use an email-based factor, you will need to set up SMTP
-        to enable sending outgoing emails. Open the EdgeDB UI with the{" "}
-        <code>edgedb ui</code> command or through the EdgeDB Cloud Console and
+        to enable sending outgoing emails. Open the Gel UI with the{" "}
+        <code>npx gel ui</code> command or through the Gel Cloud Console and
         navigate to the Auth tab. Go to the &quot;SMTP&quot; section and add
         your SMTP credentials. We recommend using a service like{" "}
         <ExternalLink href="https://mailtrap.io/">Mailtrap</ExternalLink> for
@@ -50,10 +50,10 @@ const timeline = [
     icon: UserCircleIcon,
   },
   {
-    content: "Extend the EdgeDB schema",
+    content: "Extend the Gel schema",
     description: (
       <div>
-        Open the <code>schema.esdl</code> file and add your own types and
+        Open the <code>schema/default.gel</code> file and add your own types and
         fields. You can start by adding a <code>Post</code> type with a{" "}
         <code>title</code> and <code>content</code> field or changing the{" "}
         <code>Item</code> type to include more fields. For example:
@@ -71,7 +71,7 @@ const timeline = [
     icon: CircleStackIcon,
   },
   {
-    content: "Edit the EdgeDB query",
+    content: "Edit the Gel query",
     description: (
       <div>
         Open the <code>app/dashboard/page.tsx</code> file and update the query
@@ -98,7 +98,7 @@ const itemsQuery = e.select(e.Item, (_item) => ({
     content: "Add more Auth providers",
     description: (
       <div>
-        Open the EdgeDB UI with the <code>edgedb ui</code> command and navigate
+        Open the Gel UI with the <code>npx gel ui</code> command and navigate
         to the Auth tab. Go to the &quot;Providers&quot; section and add a new
         Auth provider by clicking the &quot;Add Provider&quot; button and
         following the instructions.
@@ -162,7 +162,7 @@ const itemsQuery = e.select(e.Item, (_item) => ({
     icon: BeakerIcon,
   },
   {
-    content: "Modify the EdgeDB Auth UI callback",
+    content: "Modify the Gel Auth UI callback",
     description: (
       <div>
         Open the <code>app/auth.tsx</code> file and update the callback to
@@ -177,9 +177,9 @@ const itemsQuery = e.select(e.Item, (_item) => ({
     description: (
       <div>
         Once you&apos;re happy with your changes, you can deploy your app to the
-        EdgeDB Cloud and Vercel. Follow the deployment instructions in the{" "}
-        <ExternalLink href="https://docs.edgedb.com/guides/tutorials/nextjs_app_router#deploying-to-vercel">
-          EdgeDB documentation
+        Gel Cloud and Vercel. Follow the deployment instructions in the{" "}
+        <ExternalLink href="https://docs.geldata.com/guides/tutorials/nextjs_app_router#deploying-to-vercel">
+          Gel documentation
         </ExternalLink>
         .
       </div>

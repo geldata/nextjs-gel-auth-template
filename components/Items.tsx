@@ -1,6 +1,6 @@
 import { Item } from "@/dbschema/interfaces";
 import DeleteItem from "./DeleteItem";
-import { auth } from "@/edgedb";
+import { auth } from "@/gel";
 
 export const dynamic = "force-dynamic";
 

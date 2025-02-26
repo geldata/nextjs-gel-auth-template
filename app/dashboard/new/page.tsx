@@ -1,6 +1,6 @@
 import AddItem from "@/components/AddItem";
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
-import { auth } from "@/edgedb";
+import { auth } from "@/gel";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";

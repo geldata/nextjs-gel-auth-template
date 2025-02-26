@@ -1,4 +1,4 @@
-import { createClient } from "edgedb";
+import { createClient } from "gel";
 import { getBaseUrl } from "./base-url";
 
 const client = createClient();
@@ -16,8 +16,8 @@ ${RESET_CONFIG} ext::auth::SMTPConfig;
 `;
 
 const SETUP_AUTH_CONFIG = `
-${SET_CONFIG} ext::auth::AuthConfig::auth_signing_key := "${process.env.EDGEDB_AUTH_SIGNING_KEY}";
-${SET_CONFIG} ext::auth::AuthConfig::app_name := "EdgeDB Next.js Starter";
+${SET_CONFIG} ext::auth::AuthConfig::auth_signing_key := "${process.env.GEL_AUTH_SIGNING_KEY}";
+${SET_CONFIG} ext::auth::AuthConfig::app_name := "Gel Next.js Starter";
 ${SET_CONFIG} ext::auth::AuthConfig::brand_color := "#0000EE";
 ${SET_CONFIG} ext::auth::AuthConfig::allowed_redirect_urls := {
   "${baseUrl}",
@@ -45,7 +45,7 @@ ${SETUP_UI_CONFIG}
 ${SETUP_EMAIL_PASSWORD_PROVIDER}
   `);
   console.log(
-    "NOTE: Email password provider is configured, but SMTP is not set up. Please log into your EdgeDB UI and configure SMTP.",
+    "NOTE: Email password provider is configured, but SMTP is not set up. Please log into your Gel UI and configure SMTP.",
   );
 }
 

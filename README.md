@@ -1,18 +1,18 @@
-# 🎉 Next.js + EdgeDB + EdgeDB Auth template
+# 🎉 Next.js + Gel + Gel Auth template
 
-This starter is designed to help you get up and running with EdgeDB and Next.js quickly. It includes a basic setup for authentication, EdgeDB schema, and a UI to get you started. Below you can find the steps to set up the project and start building your app as well as some ideas for extending it further.
+This starter is designed to help you get up and running with Gel and Next.js quickly. It includes a basic setup for authentication, Gel schema, and a UI to get you started. Below you can find the steps to set up the project and start building your app as well as some ideas for extending it further.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fedgedb%2Fnextjs-edgedb-auth-template&stores=%5B%7B%22type%22%3A%22integration%22%2C%22integrationSlug%22%3A%22edgedb%22%2C%22productSlug%22%3A%22edgedb%22%7D%5D)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%geldata%2Fnextjs-Gel-auth-template&stores=%5B%7B%22type%22%3A%22integration%22%2C%22integrationSlug%22%3A%Gel%22%2C%22productSlug%22%3A%Gel%22%7D%5D)
 
 This template includes:
 
 - [Next.js](https://nextjs.org) for React framework
-- [EdgeDB](https://edgedb.com) for database
-- [EdgeDB Auth](https://edgedb.com/docs/guides/auth) for authentication
+- [Gel](https://geldata.com) for database
+- [Gel Auth](https://docs.geldata.com/guides/auth) for authentication
 - [Tailwind CSS](https://tailwindcss.com) for utility-first CSS framework
 - [ESLint](https://eslint.org) for linting
 
-![Next.js + EdgeDB + EdgeDB Auth template](public/page.png)
+![Next.js + Gel + Gel Auth template](public/page.png)
 
 ## 🧐 What's inside?
 
@@ -31,10 +31,10 @@ This template includes:
 ├── src/
 ├── public/
 ├── dbschema
-│   ├── default.esdl
+│   ├── default.gel
 │   └── migrations
-├── edgedb.toml
-├── edgedb.ts
+├── gel.toml
+├── gel.ts
 ├── eslint.config.js
 ├── next-env.d.ts
 ├── next.config.js
@@ -52,10 +52,10 @@ Directory structure:
 - `public/` - static assets
 - `components/` - React components
 - `src/` - utility functions
-- `dbschema/` - EdgeDB schema and migrations
-- `edgedb.toml` - EdgeDB configuration
-- `edgedb.ts` - EdgeDB client
-- `auth-setup.ts` - script to set up EdgeDB Auth
+- `dbschema/` - Gel schema and migrations
+- `gel.toml` - Gel configuration
+- `gel.ts` - Gel client
+- `auth-setup.ts` - script to set up Gel Auth
 - `password-auth-setup.ts` - script to set up email+password authentication
 - `eslint.config.js` - ESLint configuration
 - `next-env.d.ts` - Next.js types
@@ -73,43 +73,43 @@ To get started with this template, you need to:
 ### 1. Clone the repository & install dependencies
 
 ```sh
-git clone https://github.com/edgedb/nextjs-edgedb-auth-template.git
-cd nextjs-edgedb-auth-template
+git clone https://github.com/geldata/nextjs-gel-auth-template.git
+cd nextjs-gel-auth-template
 
 pnpm i
 ```
 
 You can also click the "Use this template" button to create a new repository based on this template.
 
-### 2. Install EdgeDB CLI (optional)
+### 2. Install Gel CLI (optional)
 
-You can just use `npx edgedb`, it would do the right thing
-to automatically install and run EdgeDB CLI for you.
+You can just use `npx gel`, it would do the right thing
+to automatically install and run Gel CLI for you.
 
-This README will use `npx edgedb <command>` style, but if you have
-the CLI installed you can use it directly, like this: `edgedb <command>`.
+This README will use `npx gel <command>` style, but if you have
+the CLI installed you can use it directly, like this: `gel <command>`.
 
 <details><summary>However, you can install the CLI manually</summary>
 
 ```sh
-curl --proto '=https' --tlsv1.2 -sSf https://sh.edgedb.com | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.gel.com | sh
 ```
 
-For more installation options, see the [EdgeDB installation guide](https://docs.edgedb.com/cli).
+For more installation options, see the [Gel installation guide](https://docs.geldata.com/cli).
 
 </details>
 
-### 3. Initialize EdgeDB project
+### 3. Initialize Gel project
 
-To run this project, you need to initialize a new EdgeDB project. Run the following command:
+To run this project, you need to initialize a new Gel project. Run the following command:
 
 ```sh
-npx edgedb project init
+npx gel project init
 ```
 
-### 4. Set up EdgeDB Auth
+### 4. Set up Gel Auth
 
-This template includes a script to set up EdgeDB Auth. It defaults to email+password authentication. Run the following command:
+This template includes a script to set up Gel Auth. It defaults to email+password authentication. Run the following command:
 
 ```sh
 pnpm auth:setup
@@ -117,7 +117,7 @@ pnpm auth:setup
 
 ### 5. Generate types
 
-This template includes a script to generate TypeScript types from the EdgeDB schema. Run the following command:
+This template includes a script to generate TypeScript types from the Gel schema. Run the following command:
 
 ```sh
 pnpm generate:all
@@ -131,12 +131,12 @@ pnpm dev
 
 Follow the instructions in the terminal to open the app in your browser.
 
-### 7. Open the EdgeDB UI
+### 7. Open the Gel UI
 
-To view the database in the EdgeDB UI or make changes to the EdgeDB Auth configuration, run:
+To view the database in the Gel UI or make changes to the Gel Auth configuration, run:
 
 ```sh
-npx edgedb ui
+npx gel ui
 ```
 
 ## ✨ Next steps
@@ -151,9 +151,9 @@ implement a custom UI later.
   <img src="public/sign-up.png" alt="Sign up" width="400" />
 </p>
 
-### Extend the EdgeDB schema
+### Extend the Gel schema
 
-Open the `dbschema/default.esdl` file and add your own types and
+Open the `dbschema/default.gel` file and add your own types and
 fields. You can start by adding a `Post` type with a
 `title` and `content` field or changing the
 `Item` type to include more fields. For example:
@@ -168,7 +168,7 @@ type Item {
 }
 ```
 
-### Edit the EdgeDB query
+### Edit the Gel query
 
 Open the `app/dashboard/page.tsx` file and update the query
 to include your new fields. You can add a new field to the query or
@@ -191,7 +191,7 @@ const items = await client.query<Props["items"][number]>(`
 
 ### Add more Auth providers
 
-Open the EdgeDB UI with the `edgedb ui` command and navigate
+Open the Gel UI with the `npx gel ui` command and navigate
 to the Auth tab. Go to the "Providers" section and add a new Auth
 provider by clicking the "Add Provider" button and following the
 instructions.
@@ -227,9 +227,9 @@ mailpit
 
 After that, you can open the Mailpit UI in your browser at `http://localhost:8025`.
 
-#### Updating the SMTP settings in the EdgeDB UI
+#### Updating the SMTP settings in the Gel UI
 
-To test the reset password flow with Mailpit, you need to update the SMTP settings in the EdgeDB UI. Open the EdgeDB UI with the `edgedb ui` command and navigate to the Auth tab. Go to the "SMTP" section and update the settings with the following values:
+To test the reset password flow with Mailpit, you need to update the SMTP settings in the Gel UI. Open the Gel UI with the `npx gel ui` command and navigate to the Auth tab. Go to the "SMTP" section and update the settings with the following values:
 
 - Host: `localhost`
 - Port: `1025`
@@ -261,15 +261,15 @@ the delete button based on the user's permissions.
 
 In the `app/auth/[...auth]/route.ts` file, you can find the user creation flow. You can modify this flow to include additional steps. For example, you can send a custom email to the new user or store additional data in the database.
 
-## 👀 Quick look at the EdgeDB schema
+## 👀 Quick look at the Gel schema
 
-In the `dbschema/default.esdl` file, you can find the EdgeDB schema for this template. It includes the `User` and `Item` types with some basic fields and access policies. Here's a quick look at the schema:
+In the `dbschema/default.gel` file, you can find the Gel schema for this template. It includes the `User` and `Item` types with some basic fields and access policies. Here's a quick look at the schema:
 
 ```sql
 using extension auth;
 ```
 
-This line enables the EdgeDB Auth extension, which provides built-in authentication and authorization features.
+This line enables the Gel Auth extension, which provides built-in authentication and authorization features.
 
 ```sql
   scalar type Role extending enum<admin, user>;
@@ -302,9 +302,9 @@ This line enables the EdgeDB Auth extension, which provides built-in authenticat
 
 This block defines the `Role` and `User` types.
 
-- The `identity` field is an EdgeDB Auth identity that uniquely identifies the user. It's created when the user signs up and is used for authentication. We link it to our custom `User` type with the `ext::auth::Identity` type.
+- The `identity` field is an Gel Auth identity that uniquely identifies the user. It's created when the user signs up and is used for authentication. We link it to our custom `User` type with the `ext::auth::Identity` type.
 
-- The `global current_user` will be set to the `User` object is linked to the currently signed in user through the `ext::auth::ClientTokenIdentity` which is set by the EdgeDB auth server library for signed in users.
+- The `global current_user` will be set to the `User` object is linked to the currently signed in user through the `ext::auth::ClientTokenIdentity` which is set by the Gel auth server library for signed in users.
 
 - The `userRole` field is an enum that defines the user's role. It defaults to "user" but can be set to "admin" for users with admin privileges.
 
@@ -353,8 +353,8 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can also check out the [EdgeDB documentation](https://edgedb.com/docs) to learn more about EdgeDB and EdgeDB Auth.
+You can also check out the [Gel documentation](https://docs.geldata.com) to learn more about Gel and Gel Auth.
 
 ## ☁️ Deployment
 
-Follow the deployment instructions in the [EdgeDB documentation](https://docs.edgedb.com/guides/tutorials/nextjs_app_router#deploying-to-vercel) to deploy your Next.js app to EdgeDB Cloud and Vercel.
+Follow the deployment instructions in the [Gel documentation](https://docs.geldata.com/guides/tutorials/nextjs_app_router#deploying-to-vercel) to deploy your Next.js app to Gel Cloud and Vercel.
