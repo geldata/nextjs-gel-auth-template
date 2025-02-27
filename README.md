@@ -12,7 +12,7 @@ This template includes:
 - [Tailwind CSS](https://tailwindcss.com) for utility-first CSS framework
 - [ESLint](https://eslint.org) for linting
 
-![Next.js + Gel + Gel Auth template](public/page.png)
+![Next.js + Gel + Gel Auth template](https://github.com/user-attachments/assets/533afad4-d577-4b88-ae78-a5083201789c)
 
 ## 🧐 What's inside?
 
