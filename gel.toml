@@ -1,2 +1,2 @@
-[edgedb]
-server-version = "5.0"
+[instance]
+server-version = "6.4"
